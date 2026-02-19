@@ -2,7 +2,6 @@ from fastapi.security import HTTPAuthorizationCredentials,HTTPBearer
 from fastapi import Depends,HTTPException,status
 from auth.jwt_handler import verify_token
 
-
 security=HTTPBearer()
 
 def get_current_user(creadentials:HTTPAuthorizationCredentials=Depends(security)):
